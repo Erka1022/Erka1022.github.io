@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Picture Gallery</title>
+	<style>
+        .carousel-item img{
+    -webkit-background-size: cover;
+    background-size: cover ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+    filter: brightness(80%);
+}
+        .zurag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+    }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="carousel-item"><img class="zurag" src="zurag1.jpg"></div>
+		<div class="carousel-item"><img class="zurag" src="zurag2.jpg"></div>
+		<div class="carousel-item"><img class="zurag" src="zurag3.jpg"></div>
+		<div class="carousel-item"><img class="zurag" src="zurag4.jpg"></div>
+		<div class="carousel-item"><img class="zurag" src="zurag5.jpg"></div>
+        <div class="carousel-item"><img class="zurag" src="zurag6.jpg"></div>	
+    </div>
+    <script>
+    let currentIndex = 0;
+const photos = document.getElementsByClassName("zurag");
+
+setInterval(() => {
+  // set the current photo to the back of the stack
+  photos[currentIndex].style.zIndex = 1;
+  
+  // increment the index
+  currentIndex++;
+  
+  // reset the index to 0 if it exceeds the number of photos
+  if (currentIndex >= photos.length) {
+    currentIndex = 0;
+  }
+  
+  // bring the next photo to the front of the stack
+  photos[currentIndex].style.zIndex = 2;
+}, 2000);
+   </script>
+</body>
+</html>
