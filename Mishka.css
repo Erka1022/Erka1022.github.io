@@ -15,7 +15,7 @@ p {
     text-align: center;
 }
 
-button {
+.towch {
     background-color: #F26D7D;
     color: #FFF;
     border-radius: 20px;
@@ -23,9 +23,10 @@ button {
     font-size: 18px;
     border: none;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
-button:hover {
+.towch:hover {
     background-color: #FFAFAF;
     transform: scale(1.1);
 }
@@ -39,7 +40,7 @@ img {
 }
 @media only screen and (max-width:700px){
 
-    button{
+    .towch{
         position: absolute;
         margin-left: 100px;
     }
